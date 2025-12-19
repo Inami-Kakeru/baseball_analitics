@@ -1,0 +1,41 @@
+## Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+## OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+## Data (do not push raw/statcast or large intermediate tables)
+/data/
+layer1_5/data/input/
+layer1_5/data/intermediate/
+layer1/data/
+
+## Root large documents (keep local)
+/*.pdf
+/*.csv
+
+## Outputs (keep only "rev" figures + a few small csv artifacts)
+layer1_5/data/output/**
+!layer1_5/data/output/
+!layer1_5/data/output/ohtani_attack_angle_band_rate.csv
+!layer1_5/data/output/rev_twostrike_*.csv
+!layer1_5/data/output/plots/
+layer1_5/data/output/plots/**
+!layer1_5/data/output/plots/rev/
+!layer1_5/data/output/plots/rev/**
+
+## Explicitly ignore the largest derived table
+layer1_5/data/output/phase_all_base_table.csv
+
+## Local env
+.env
+venv/
+.venv/
+

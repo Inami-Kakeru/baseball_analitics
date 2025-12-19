@@ -1,0 +1,42 @@
+# 特徴量グループ定義
+# 物理特性・打撃特性・投球条件のグルーピング
+
+feature_groups:
+  # 物理特性
+  physical:
+    - launch_speed
+    - launch_angle
+    - hit_distance_sc
+    - effective_speed
+    - release_speed
+  
+  # 回転関連（代理変数含む）
+  spin:
+    - release_spin_rate
+    - spin_axis
+    - spin_proxy_1  # 01で定義
+    - spin_proxy_2  # 01で定義
+  
+  # 打撃特性
+  swing:
+    - bat_speed
+    - swing_length
+    - attack_angle
+    - attack_direction
+    - swing_path_tilt
+  
+  # 接触質
+  contact:
+    - contact_quality_1  # 02で定義
+    - contact_quality_2  # 02で定義
+    - ev_decay_rate  # 02で定義
+  
+  # 投球条件
+  pitch:
+    - pitch_type
+    - release_pos_x
+    - release_pos_z
+    - pfx_x
+    - pfx_z
+    - zone
+

@@ -1,0 +1,21 @@
+# 閾値・分位数・除外条件の設定
+
+thresholds:
+  # 分位数（Layer 1から継承）
+  top_quantile: 0.15  # 高価値帯域の定義
+  
+  # 最小サンプル数
+  min_count: 2  # ビン集計時の最小件数
+  
+  # 除外条件
+  exclusion:
+    launch_speed_min: 0.0
+    launch_angle_min: -90.0
+    launch_angle_max: 90.0
+  
+  # スクリーニング用
+  screening:
+    min_effect_size: 0.1  # 最小効果量
+    min_samples_per_group: 10  # 層別分析時の最小サンプル数
+    stability_threshold: 0.8  # 安定性スコアの閾値
+

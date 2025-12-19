@@ -1,0 +1,21 @@
+# y₁（高価値帯）の定義
+# Layer 1で定義された y の再定義・拡張用設定
+
+targets:
+  # 基本定義（Layer 1から継承）
+  base:
+    source: "y"  # Layer 1のラベル
+    description: "高価値帯域到達ラベル（E[V]上位15%）"
+  
+  # 拡張定義（必要に応じて）
+  strict:
+    condition: "V >= 2"  # 三塁打以上のみ
+    description: "より厳格な長打定義"
+  
+  moderate:
+    condition: "V >= 1.5"  # 二塁打以上（中間値）
+    description: "緩い長打定義"
+  
+  # 使用するターゲット（デフォルト）
+active_target: "base"
+
